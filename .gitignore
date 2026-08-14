@@ -1,0 +1,70 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# Environment Variables
+.env
+backend/.env
+
+# =========================
+# ChromaDB / Vector Database
+# =========================
+chroma_db/
+chroma/
+vectorstore/
+*.db
+
+# =========================
+# Uploaded / Generated Files
+# =========================
+uploads/
+uploaded_files/
+*.pdf
+
+# =========================
+# Node / React
+# =========================
+node_modules/
+frontend/node_modules/
+
+# Build files
+dist/
+build/
+frontend/dist/
+
+# Vite
+frontend/.vite/
+
+# =========================
+# Logs
+# =========================
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# OS
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Environment files
+# =========================
+.env.*
+!.env.example
