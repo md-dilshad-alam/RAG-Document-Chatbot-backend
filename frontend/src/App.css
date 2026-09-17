@@ -14,7 +14,6 @@
 
   color: #111827;
   background: #f8fafc;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }
@@ -40,90 +39,100 @@ button {
   min-height: 100vh;
 }
 
-
-/* ========================================
+/* ================================
    HEADER
-======================================== */
+================================ */
 
 .header {
-  min-height: 78px;
-
-  padding: 18px 42px;
-
+  min-height: 76px;
+  padding: 16px 42px;
   background: #ffffff;
-
   border-bottom: 1px solid #e5e7eb;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   gap: 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+  background: #2563eb;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
 }
 
 .header h1 {
   margin: 0;
 
-  font-size: 26px;
+  font-size: 23px;
   font-weight: 700;
-
-  letter-spacing: -0.5px;
+  letter-spacing: -0.4px;
 
   color: #111827;
 }
 
 .header p {
-  margin: 5px 0 0;
+  margin: 3px 0 0;
 
-  font-size: 14px;
-  font-weight: 400;
-
+  font-size: 13px;
   color: #6b7280;
 }
 
-
-/* ========================================
+/* ================================
    BACKEND STATUS
-======================================== */
+================================ */
 
 .backend-status {
   display: flex;
   align-items: center;
-
   gap: 8px;
 
   padding: 7px 12px;
 
   border: 1px solid #bbf7d0;
-
   border-radius: 999px;
 
   background: #f0fdf4;
-
   color: #15803d;
 
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
 }
 
-.backend-status span {
+.status-dot {
   width: 8px;
   height: 8px;
 
   border-radius: 50%;
-
   background: #16a34a;
 
-  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.12);
+  box-shadow:
+    0 0 0 3px rgba(22, 163, 74, 0.12);
 }
 
-
-/* ========================================
+/* ================================
    UPLOAD SECTION
-======================================== */
+================================ */
 
 .upload-section {
-  min-height: calc(100vh - 78px);
+  min-height: calc(100vh - 76px);
 
   display: flex;
   align-items: center;
@@ -132,53 +141,78 @@ button {
   padding: 40px 20px;
 }
 
-
-/* ========================================
+/* ================================
    UPLOAD CARD
-======================================== */
+================================ */
 
 .upload-card {
-  width: min(620px, 100%);
+  width: min(640px, 100%);
 
-  padding: 48px 42px;
+  padding: 52px 44px;
 
   background: #ffffff;
 
   border: 1px solid #e5e7eb;
-
   border-radius: 18px;
 
   text-align: center;
 
   box-shadow:
-    0 10px 30px rgba(15, 23, 42, 0.06),
-    0 2px 6px rgba(15, 23, 42, 0.03);
+    0 15px 40px rgba(15, 23, 42, 0.07),
+    0 2px 8px rgba(15, 23, 42, 0.03);
+}
+
+.upload-icon {
+  width: 62px;
+  height: 62px;
+
+  margin: 0 auto 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: #eff6ff;
+  color: #2563eb;
+
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
 }
 
 .upload-card h2 {
   margin: 0 0 10px;
 
-  font-size: 28px;
+  font-size: 29px;
   font-weight: 700;
-
-  letter-spacing: -0.4px;
+  letter-spacing: -0.6px;
 
   color: #111827;
 }
 
-.upload-card p {
-  margin: 0;
+.upload-description {
+  max-width: 480px;
+
+  margin: 0 auto;
 
   font-size: 15px;
-  line-height: 1.6;
+  line-height: 1.7;
 
   color: #6b7280;
 }
 
+.file-hint {
+  margin: 12px 0 0;
 
-/* ========================================
-   SELECT PDF BUTTON
-======================================== */
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* ================================
+   SELECT PDF
+================================ */
 
 .select-button {
   display: inline-flex;
@@ -194,14 +228,13 @@ button {
   border-radius: 9px;
 
   background: #2563eb;
-
   color: #ffffff;
 
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
 
   box-shadow:
-    0 4px 10px rgba(37, 99, 235, 0.18);
+    0 4px 12px rgba(37, 99, 235, 0.18);
 
   transition:
     background 0.2s ease,
@@ -222,55 +255,87 @@ button {
   transform: translateY(0);
 }
 
-
-/* ========================================
+/* ================================
    SELECTED FILE
-======================================== */
+================================ */
 
 .selected-file {
-  margin-top: 24px;
+  margin-top: 26px;
 
-  padding: 16px;
+  padding: 18px;
 
-  border: 1px solid #e5e7eb;
-
+  border: 1px solid #dbeafe;
   border-radius: 12px;
 
-  background: #f8fafc;
+  background: #f8fbff;
 }
 
-.selected-file p {
-  margin: 0;
+.file-info {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  text-align: left;
+}
+
+.file-icon {
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #eff6ff;
+  color: #2563eb;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.file-details {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.file-label {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.file-details strong {
+  color: #111827;
 
   font-size: 14px;
-
-  color: #6b7280;
+  font-weight: 600;
 
   word-break: break-word;
 }
 
-.selected-file strong {
-  color: #111827;
-
-  font-weight: 600;
-}
-
-
-/* ========================================
+/* ================================
    UPLOAD BUTTON
-======================================== */
+================================ */
 
 .upload-button {
-  margin-top: 14px;
+  width: 100%;
 
-  padding: 10px 20px;
+  margin-top: 16px;
+
+  padding: 11px 20px;
 
   border: none;
-
   border-radius: 8px;
 
   background: #16a34a;
-
   color: #ffffff;
 
   font-size: 14px;
@@ -289,17 +354,15 @@ button {
 
 .upload-button:disabled {
   opacity: 0.55;
-
   cursor: not-allowed;
 }
 
-
-/* ========================================
+/* ================================
    CHAT CONTAINER
-======================================== */
+================================ */
 
 .chat-container {
-  height: calc(100vh - 78px);
+  height: calc(100vh - 76px);
 
   display: flex;
   flex-direction: column;
@@ -307,21 +370,117 @@ button {
   background: #f8fafc;
 }
 
+/* ================================
+   DOCUMENT BAR
+================================ */
 
-/* ========================================
+.document-bar {
+  width: 100%;
+
+  padding: 12px 28px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.document-info {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  min-width: 0;
+}
+
+.document-icon {
+  width: 36px;
+  height: 36px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: #eff6ff;
+  color: #2563eb;
+
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.document-info > div:last-child {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.document-info span {
+  font-size: 10px;
+  color: #9ca3af;
+}
+
+.document-info strong {
+  max-width: 500px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #374151;
+}
+
+.new-document-button {
+  flex-shrink: 0;
+
+  padding: 8px 13px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #374151;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.new-document-button:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
+}
+
+/* ================================
    MESSAGES
-======================================== */
+================================ */
 
 .messages {
   flex: 1;
 
   width: 100%;
-
   max-width: 1050px;
 
   margin: 0 auto;
 
-  padding: 32px 28px;
+  padding: 28px;
 
   overflow-y: auto;
 
@@ -331,33 +490,69 @@ button {
   gap: 18px;
 }
 
+.message-row {
+  display: flex;
 
-/* ========================================
-   MESSAGE
-======================================== */
+  align-items: flex-start;
+
+  gap: 10px;
+
+  max-width: 80%;
+}
+
+.message-row.user {
+  align-self: flex-end;
+
+  flex-direction: row-reverse;
+}
+
+.message-row.assistant {
+  align-self: flex-start;
+}
+
+.message-avatar {
+  width: 30px;
+  height: 30px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: #e5e7eb;
+  color: #4b5563;
+
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.message-row.user .message-avatar {
+  background: #dbeafe;
+  color: #2563eb;
+}
 
 .message {
-  max-width: 70%;
+  max-width: 100%;
 
-  padding: 12px 16px;
+  padding: 11px 15px;
 
   border-radius: 12px;
 
-  font-size: 15px;
+  font-size: 14px;
+  line-height: 1.65;
 
-  line-height: 1.6;
+  word-break: break-word;
 
-  word-wrap: break-word;
+  white-space: pre-wrap;
 }
 
-
-/* User message */
+/* User */
 
 .message.user {
-  align-self: flex-end;
-
   background: #2563eb;
-
   color: #ffffff;
 
   border-bottom-right-radius: 4px;
@@ -366,14 +561,10 @@ button {
     0 3px 8px rgba(37, 99, 235, 0.12);
 }
 
-
-/* Assistant message */
+/* Assistant */
 
 .message.assistant {
-  align-self: flex-start;
-
   background: #ffffff;
-
   color: #1f2937;
 
   border: 1px solid #e5e7eb;
@@ -384,50 +575,88 @@ button {
     0 2px 5px rgba(15, 23, 42, 0.04);
 }
 
+/* ================================
+   THINKING
+================================ */
 
-/* ========================================
+.thinking {
+  color: #6b7280;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 5px;
+}
+
+.thinking::after {
+  content: "...";
+
+  animation: dots 1.2s infinite;
+}
+
+@keyframes dots {
+  0%,
+  20% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ================================
    INPUT AREA
-======================================== */
+================================ */
 
-.input-container {
+.input-area {
   width: 100%;
 
-  padding: 18px 28px;
+  padding: 14px 28px 16px;
 
   background: #ffffff;
 
   border-top: 1px solid #e5e7eb;
+}
+
+.input-container {
+  width: 100%;
+  max-width: 1050px;
+
+  margin: 0 auto;
 
   display: flex;
 
-  gap: 12px;
+  align-items: flex-end;
+
+  gap: 10px;
 }
 
-
-/* ========================================
+/* ================================
    TEXTAREA
-======================================== */
+================================ */
 
 .input-container textarea {
   flex: 1;
 
-  min-height: 52px;
+  min-height: 50px;
   max-height: 130px;
 
   resize: none;
 
-  padding: 14px 16px;
+  padding: 13px 15px;
 
   border: 1px solid #d1d5db;
-
   border-radius: 10px;
 
   background: #ffffff;
-
   color: #111827;
 
-  font-size: 15px;
-
+  font-size: 14px;
   line-height: 1.5;
 
   outline: none;
@@ -448,25 +677,25 @@ button {
     0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
+.input-container textarea:disabled {
+  background: #f9fafb;
+}
 
-/* ========================================
+/* ================================
    SEND BUTTON
-======================================== */
+================================ */
 
-.input-container button {
-  width: 100px;
-
-  min-height: 52px;
+.send-button {
+  width: 82px;
+  min-height: 50px;
 
   border: none;
-
   border-radius: 10px;
 
   background: #2563eb;
-
   color: #ffffff;
 
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
 
   transition:
@@ -474,17 +703,17 @@ button {
     transform 0.2s ease;
 }
 
-.input-container button:hover:not(:disabled) {
+.send-button:hover:not(:disabled) {
   background: #1d4ed8;
 
   transform: translateY(-1px);
 }
 
-.input-container button:active:not(:disabled) {
+.send-button:active:not(:disabled) {
   transform: translateY(0);
 }
 
-.input-container button:disabled {
+.send-button:disabled {
   opacity: 0.5;
 
   cursor: not-allowed;
@@ -492,10 +721,25 @@ button {
   transform: none;
 }
 
+/* ================================
+   INPUT HINT
+================================ */
 
-/* ========================================
+.input-hint {
+  max-width: 1050px;
+
+  margin: 7px auto 0;
+
+  font-size: 10px;
+
+  color: #9ca3af;
+
+  text-align: center;
+}
+
+/* ================================
    SCROLLBAR
-======================================== */
+================================ */
 
 .messages::-webkit-scrollbar {
   width: 6px;
@@ -515,42 +759,52 @@ button {
   background: #9ca3af;
 }
 
-
-/* ========================================
+/* ================================
    MOBILE
-======================================== */
+================================ */
 
 @media (max-width: 768px) {
-
   .header {
-    min-height: auto;
+    min-height: 70px;
 
-    padding: 16px 20px;
+    padding: 13px 18px;
 
-    align-items: flex-start;
+    align-items: center;
+
+    gap: 12px;
+  }
+
+  .brand {
+    gap: 9px;
+  }
+
+  .brand-icon {
+    width: 36px;
+    height: 36px;
+
+    border-radius: 9px;
+
+    font-size: 11px;
   }
 
   .header h1 {
-    font-size: 21px;
+    font-size: 18px;
   }
 
   .header p {
-    font-size: 13px;
+    font-size: 11px;
   }
 
   .backend-status {
-    padding: 6px 9px;
+    padding: 6px 8px;
 
-    font-size: 12px;
+    font-size: 10px;
   }
 
-  .backend-status span {
-    width: 7px;
-    height: 7px;
+  .status-dot {
+    width: 6px;
+    height: 6px;
   }
-
-
-  /* Upload */
 
   .upload-section {
     min-height: calc(100vh - 70px);
@@ -559,16 +813,23 @@ button {
   }
 
   .upload-card {
-    padding: 36px 24px;
+    padding: 38px 24px;
 
     border-radius: 15px;
+  }
+
+  .upload-icon {
+    width: 54px;
+    height: 54px;
+
+    margin-bottom: 18px;
   }
 
   .upload-card h2 {
     font-size: 23px;
   }
 
-  .upload-card p {
+  .upload-description {
     font-size: 14px;
   }
 
@@ -577,80 +838,139 @@ button {
 
     padding: 11px 18px;
 
-    font-size: 14px;
+    font-size: 13px;
   }
-
-
-  /* Chat */
 
   .chat-container {
     height: calc(100vh - 70px);
   }
 
+  .document-bar {
+    padding: 10px 14px;
+  }
+
+  .document-info strong {
+    max-width: 180px;
+  }
+
+  .new-document-button {
+    padding: 7px 9px;
+
+    font-size: 10px;
+  }
+
   .messages {
-    padding: 22px 16px;
+    padding: 20px 14px;
 
     gap: 14px;
   }
 
-  .message {
-    max-width: 88%;
+  .message-row {
+    max-width: 90%;
 
-    padding: 10px 13px;
-
-    font-size: 14px;
+    gap: 7px;
   }
 
+  .message-avatar {
+    width: 27px;
+    height: 27px;
 
-  /* Input */
+    font-size: 8px;
+  }
+
+  .message {
+    padding: 10px 12px;
+
+    font-size: 13px;
+  }
+
+  .input-area {
+    padding: 10px 12px 12px;
+  }
 
   .input-container {
-    padding: 12px 14px;
-
-    gap: 8px;
+    gap: 7px;
   }
 
   .input-container textarea {
-    min-height: 46px;
+    min-height: 45px;
 
-    padding: 11px 13px;
+    padding: 10px 12px;
 
-    font-size: 14px;
+    font-size: 13px;
   }
 
-  .input-container button {
-    width: 78px;
+  .send-button {
+    width: 70px;
 
-    min-height: 46px;
+    min-height: 45px;
 
-    font-size: 14px;
+    font-size: 13px;
+  }
+
+  .input-hint {
+    display: none;
   }
 }
 
-
-/* ========================================
+/* ================================
    SMALL MOBILE
-======================================== */
+================================ */
 
 @media (max-width: 480px) {
-
   .header {
-    padding: 14px 16px;
+    padding: 12px 14px;
+  }
+
+  .brand-icon {
+    display: none;
   }
 
   .header h1 {
-    font-size: 19px;
+    font-size: 17px;
+  }
+
+  .header p {
+    font-size: 10px;
   }
 
   .backend-status {
-    font-size: 11px;
+    font-size: 9px;
+  }
+
+  .upload-card {
+    padding: 32px 20px;
+  }
+
+  .upload-card h2 {
+    font-size: 21px;
+  }
+
+  .selected-file {
+    padding: 14px;
+  }
+
+  .document-info strong {
+    max-width: 130px;
+  }
+
+  .new-document-button {
+    font-size: 9px;
+  }
+
+  .message-row {
+    max-width: 94%;
+  }
+
+  .message-avatar {
+    display: none;
   }
 
   .message {
-    max-width: 92%;
+    font-size: 13px;
   }
 
-  .input-container button {
-    width: 70px;
+  .send-button {
+    width: 64px;
   }
 }

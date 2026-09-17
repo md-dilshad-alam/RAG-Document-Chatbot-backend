@@ -16,15 +16,17 @@ app = FastAPI()
 # CORS
 # -----------------------------
 
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
-    allow_origin_regex="https://rag-document-chatbot-backend.vercel.app",
+    allow_origins=[
+        "http://localhost:5173",
+        "https://rag-document-chatbot-backend.vercel.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 
 # -----------------------------
 # Upload directory
