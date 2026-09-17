@@ -7,7 +7,10 @@ from langchain_google_genai import (
     ChatGoogleGenerativeAI,
 )
 from langchain_chroma import Chroma
+from langchain_core.documents import Document
 
+from pdf2image import convert_from_path
+import pytesseract
 
 load_dotenv()
 
@@ -17,11 +20,50 @@ load_dotenv()
 # -----------------------------
 
 def load_documents(file_path):
+    # First try normal PDF text extraction
     loader = PyPDFLoader(file_path)
-
     documents = loader.load()
 
-    return documents
+    # Check whether PDF contains readable text
+    total_text = sum(
+        len(document.page_content.strip())
+        for document in documents
+    )
+
+    # If text exists, use normal extraction
+    if total_text > 0:
+        return documents
+
+    # If no text exists, use OCR
+    print("No text found. Starting OCR...")
+
+    images = convert_from_path(
+        file_path,
+        dpi=200
+    )
+
+    ocr_documents = []
+
+    for page_number, image in enumerate(images, start=1):
+
+        text = pytesseract.image_to_string(image)
+
+        if text.strip():
+            ocr_documents.append(
+                Document(
+                    page_content=text,
+                    metadata={
+                        "source": file_path,
+                        "page": page_number
+                    }
+                )
+            )
+
+    print(
+        f"OCR completed. Extracted {len(ocr_documents)} pages."
+    )
+
+    return ocr_documents
 
 
 # -----------------------------
