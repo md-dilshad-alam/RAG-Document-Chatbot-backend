@@ -45,7 +45,7 @@ def split_documents(documents):
 
 def create_embeddings():
     embeddings = GoogleGenerativeAIEmbeddings(
-        model="gemini-embedding-2-preview"
+        model="gemini-embedding-2"
     )
 
     return embeddings
