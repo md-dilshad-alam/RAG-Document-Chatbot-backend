@@ -71,7 +71,7 @@ function App() {
 
 
       const response = await fetch(
-        "http://localhost:8000/upload",
+        "https://rag-document-chatbot-backend.onrender.com/upload",
         {
           method: "POST",
           body: formData,
@@ -159,7 +159,7 @@ function App() {
     try {
 
       const response = await fetch(
-        "http://localhost:8000/ask",
+        "https://rag-document-chatbot-backend.onrender.com/ask",
         {
           method: "POST",
 
